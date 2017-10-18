@@ -1,0 +1,4 @@
+- name: Extract Kibana
+  src: /vagrant/binaries/kibana-5.5.2-linux-x86_64.tar.gz
+  dest: {installation_folder}/kibana
+  remote_src: yes

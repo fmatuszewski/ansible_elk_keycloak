@@ -1,0 +1,8 @@
+[keycloak]
+localhost
+
+[elasticsearch]
+localhost
+
+[kibana]
+localhost

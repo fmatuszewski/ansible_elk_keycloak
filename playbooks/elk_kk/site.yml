@@ -1,0 +1,31 @@
+---
+# This playbook deploys a simple standalone Tomcat 7 server.
+
+- hosts: keycloak
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  roles:
+    - rsyslog
+    - keycloak
+
+- hosts: elastic
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  roles:
+    - rsyslog
+    - elastic
+    - kibana
+    - rsyslog_configure_server
+
+- hosts: nginx
+  remote_user: root
+  become: yes
+  become_method: sudo
+
+  roles:
+    - rsyslog
+    - rsyslog_configure_client

@@ -1,0 +1,4 @@
+- name: Extract Keycloak
+  src: /vagrant/binaries/keycloak-2.5.5.Final.tar.gz
+  dest: {installation_folder}/keycloak
+  remote_src: yes
